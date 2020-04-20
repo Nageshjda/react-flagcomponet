@@ -1,23 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import Logo from "./new_flag.png";
+import over from "./new_download_2.png";
 import './App.css';
 
 function App() {
+  function hide1(){
+    var element=document.querySelector('.App-over');
+    element.style.visibility='hidden';
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={Logo} className="App-logo" alt="download" /> 
+        <img src={over} className="App-over" onClick={hide1}/>
       </header>
     </div>
   );
